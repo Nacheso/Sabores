@@ -22,7 +22,6 @@ const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
     <Routes>
-
       <Route path="/" element={<App />}>
         <Route path="Formulario" element={<Formulario />} />
         <Route path="Formulario1" element={<Formulario1 />} />

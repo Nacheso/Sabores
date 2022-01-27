@@ -21,6 +21,27 @@ mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
         console.log("¡Sabores conectada!")
     });
 
+
+    const whitelist = [
+        // Allow domains here
+        'http://localhost:3000/',
+        'http://localhost:3001/',
+        'http://localhost/',
+        'http://127.0.0.1:3001/',
+        'http://85.60.104.68:3001/'
+        
+      ]
+      const corsOptions = {
+        origin(origin, callback) {
+          const originIsWhitelisted = whitelist.indexOf(origin) !== -1
+          callback(null, originIsWhitelisted)
+        },
+        credentials: true
+      }
+      //aplicanco el cors de forma global
+      // si comento la siguiente línea sigue funcionando ¡¡¡ TENDRÍA QUE CAERSE !!! pero sigue funcionando la ruta http://localhost:3000/clientes
+      app.use(cors()) // sin cors option funciona, aunque se podrá meter todo el mundo whitelist de adorno y corsOption también
+      
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}));
 
