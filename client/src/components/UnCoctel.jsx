@@ -16,6 +16,9 @@ function UnCoctel({ name, varios, to = "" }) {
           return productos;
         });
       })
+
+      // productos
+      // [producto1, producto2] split(",")
       .catch((err) => {
         console.log(err);
       });
@@ -24,10 +27,11 @@ function UnCoctel({ name, varios, to = "" }) {
   return (
     <div>
       ¡QUE LO DISFRUTE!
-      <table>
-        <tr>{coctel.name}</tr>
-        <td>{coctel.ingredientes}</td>
-      </table>
+      <ul>
+        <li>{coctel.name}</li>
+        
+        <li>{coctel.ingredientes}</li>
+      </ul>
       <ul>¿QUIERE SEGUIR MIRANDO LA CARTA?</ul>
     </div>
   );

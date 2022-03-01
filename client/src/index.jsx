@@ -12,6 +12,9 @@ import SubcategoriaVirgin from "./subfiltrosVirgin/SubcategoriaVirgin";
 import SubcategoriaAlcohol from "./subfiltrosAlcohol/SubcategoriaAlcohol";
 
 import Carta from "./views/Carta";
+
+import HechoNoelia from "./views/HechoNoelia"
+
 import UnCoctel from "./components/UnCoctel";
 
 import Fotos from "./views/Fotos";
@@ -19,6 +22,7 @@ import Fotos from "./views/Fotos";
 import CategoriaPruebaAlcohol from "./filtros/CategoriaPruebaAlcohol";
 
 const rootElement = document.getElementById("root");
+
 render(
   <BrowserRouter>
     <Routes>
@@ -29,6 +33,8 @@ render(
         <Route path="Prescriptor" element={<Prescriptor />} />
 
         <Route path="Carta" element={<Carta />} />
+
+        <Route path="HechoNoelia" element={<HechoNoelia />} />
 
         <Route path="CategoriaVirgin" element={<CategoriaVirgin />} />
         <Route path="SubcategoriaVirgin" element={<SubcategoriaVirgin />} />

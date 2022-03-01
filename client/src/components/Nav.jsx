@@ -11,6 +11,9 @@ function Nav() {
         <Link to="../Formulario">
           <li>LOGIN</li>
         </Link>
+        <Link to="../HechoNoelia">
+          <li>¡NACHONOELIA!</li>
+        </Link>
         <Link to="../Prescriptor">
           <li>¡PIDETE ALGO!</li>
         </Link>
